@@ -171,5 +171,7 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+.DS_Store
+
 ADG5298.pdf
 subscripts.txt
