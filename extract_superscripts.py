@@ -5,7 +5,7 @@ import os
 def extract_subscripts(pdf_path, threshold):
     subscripts = []
 
-    # PDFを開く
+    # Open the PDF file
     with pymupdf.open(pdf_path) as doc:
         for page_num, page in enumerate(doc, start=1):
             blocks = page.get_text("dict")["blocks"]  # Get text blocks
@@ -58,7 +58,7 @@ if output_file_name == "":
 subscripts = extract_subscripts(input_file_name, threshold)
 
 # Save the extracted superscript texts to a text file
-with open(output_file_name, "w") as f:
+with open(output_file_name, "w", encoding="utf-8") as f:
     if subscripts:
         for item in subscripts:
             f.write(f"Page {item['page']}: {item['text']} (Font Size: {item['size']}, Position: {item['position']})\n")
