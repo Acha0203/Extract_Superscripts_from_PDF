@@ -1,8 +1,8 @@
-# Python Program to Extract Superscripts from a PDF file
+# Python Program to Extract Subscripts from a PDF file
 
 ## Description
 
-You can extract superscript texts from a PDF file by using this Python program.
+You can extract subscript texts from a PDF file by using this Python program.
 
 ## Usage
 
@@ -33,5 +33,12 @@ pip install --upgrade pymupdf
 3. Run this program with the following command:
 
 ```shell
-python extract_superscripts.py
+python extract_subscripts.py
+```
+
+4. Follow the on-screen instructions.
+5. You can exit your virtual environment with the following command:
+
+```shell
+deactivate
 ```
