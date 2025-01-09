@@ -42,3 +42,9 @@ python extract_subscripts.py
 ```shell
 deactivate
 ```
+
+## Tips
+
+- Due to the nature of this program, text in graphs and figures may be extracted incorrectly. Please ignore such texts by referring to the page number.
+- To successfully extract subscript texts, first set the font size of the subscript you want to extract to around 8.5, extract it once, and check the result. If the subscripts are not extracted, specify the value larger than '8.5' for the font size and try extracting again.
+- If a lot of non-subscript texts are extracted along with subscripts, check the font size of the subscript texts by referring your output file. Within the same file, subscripts are often the same size, so specify a slightly larger size as the font size of the subscript you want to extract, and then try extracting again.

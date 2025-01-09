@@ -39,21 +39,26 @@ while input_file_name == "":
         input_file_name = ""
 
 print(f"This program will extract subscript texts from {input_file_name}.")
-print("Enter the threshold value of the font size for extracting subscript texts. The default value is 8.5: ")
+
+default_threshold = 8.5
+
+print(f"Enter the threshold value of the font size for extracting subscript texts. The default value is {default_threshold}: ")
 sys.stdout.flush()
 threshold_input = sys.stdin.readline().strip()
 
 if threshold_input == "":
-    threshold = 8.5
+    threshold = default_threshold
 else:
-    threshold = int(threshold_input)
+    threshold = float(threshold_input)
 
-print("Enter the file name to save the extracted subscript texts in the format 'XXX.txt'. The default file name is 'subscripts.txt': ")
+default_output_file_name = "subscripts.txt"
+
+print(f"Enter the file name to save the extracted subscript texts in the format 'XXX.txt'. The default file name is {default_output_file_name}: ")
 sys.stdout.flush()
 output_file_name = str(sys.stdin.readline()).strip()
 
 if output_file_name == "":
-    output_file_name = "subscripts.txt"
+    output_file_name = default_output_file_name
 
 subscripts = extract_subscripts(input_file_name, threshold)
 
